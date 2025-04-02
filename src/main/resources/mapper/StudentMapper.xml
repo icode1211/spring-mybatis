@@ -8,6 +8,14 @@
         FROM students;
     </select>
 
-
+    <select id="selectStudents" resultType="Students">
+        SELECT id, name, age, address
+        FROM students
+        <where>
+            <if test="id != null and id != ''">
+                id = #{id}
+            </if>
+        </where>
+    </select>
 
 </mapper>
