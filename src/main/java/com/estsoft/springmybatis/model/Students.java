@@ -13,6 +13,10 @@ public class Students {
 
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Students(String name, String address, int age) {
         this.name = name;
         this.address = address;

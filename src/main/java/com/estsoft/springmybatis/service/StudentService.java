@@ -25,4 +25,8 @@ public class StudentService {
     public int saveStudent(Students students) {
         return studentMapper.saveStudent(students);
     }
+
+    public int updateStudent(Students students) {
+        return studentMapper.updateStudent(students);
+    }
 }

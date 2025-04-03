@@ -23,4 +23,10 @@
         VALUES (#{name}, #{age}, #{address})
     </insert>
 
+    <update id="updateStudent">
+        UPDATE students
+        SET name = #{name}, age = #{age}, address = #{address}
+        WHERE id = #{id}
+    </update>
+
 </mapper>

@@ -34,4 +34,12 @@ public class StudentController {
         int saveCount = studentService.saveStudent(student);
         return saveCount;
     }
+
+    // PUT /students/1    {name, age, address}
+    @PutMapping("/students/{id}")
+    public int updateStudent(@PathVariable Integer id,
+            @RequestBody Students students) {
+        students.setId(id);
+        return studentService.updateStudent(students);
+    }
 }

@@ -13,4 +13,6 @@ public interface StudentMapper {
     List<Students> selectStudents(Long id);
 
     int saveStudent(Students students);
+
+    int updateStudent(Students students);
 }

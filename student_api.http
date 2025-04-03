@@ -13,10 +13,10 @@ Content-Type: application/json
 
 
 ### PUT request
-PUT http://localhost:8080/students/5
+PUT http://localhost:8080/students/7
 Content-Type: application/json
 
-{"name": "장이수", "age": 20, "address": "수원시"}
+{"name": "장이수", "age": 25, "address": "수원시"}
 
 
 ### DELETE Request
