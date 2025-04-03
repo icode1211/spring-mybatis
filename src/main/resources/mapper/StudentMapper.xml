@@ -18,4 +18,9 @@
         </where>
     </select>
 
+    <insert id="saveStudent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO students (name, age, address)
+        VALUES (#{name}, #{age}, #{address})
+    </insert>
+
 </mapper>

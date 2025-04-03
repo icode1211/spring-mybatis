@@ -21,4 +21,8 @@ public class StudentService {
     public List<Students> selectStudents(Long id) {
         return studentMapper.selectStudents(id);
     }
+
+    public int saveStudent(Students students) {
+        return studentMapper.saveStudent(students);
+    }
 }

@@ -2,9 +2,7 @@ package com.estsoft.springmybatis.controller;
 
 import com.estsoft.springmybatis.model.Students;
 import com.estsoft.springmybatis.service.StudentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +26,12 @@ public class StudentController {
     @GetMapping("/students")
     public List<Students> getStudentList(@RequestParam(required = false) Long id) {
         return studentService.selectStudents(id);
+    }
+
+    // POST /students
+    @PostMapping("/students")
+    public int saveStudent(@RequestBody Students student) {
+        int saveCount = studentService.saveStudent(student);
+        return saveCount;
     }
 }
